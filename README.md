@@ -1,6 +1,11 @@
 # Island Fevers SVG Automated Tests
 
-This repository contains automated end-to-end tests for the Island Fevers SVG website ([staging](https://islandfeversvg.com/staging22)) using [Playwright](https://playwright.dev/). The tests cover basic page loads, authentication, and visual verification for the main site pages.
+This repository contains automated end-to-end tests for the Island Fevers SVG website, covering both the staging and production environments using [Playwright](https://playwright.dev/). The tests ensure basic page loads, authentication, and visual verification for the main site pages.
+
+## Project Structure
+
+- **Staging Tests**: Located in `islandfeversvg.com/staging`, these tests target the staging environment at [https://islandfeversvg.com/staging22](https://islandfeversvg.com/staging22).
+- **Production Tests**: Located in `islandfeversvg.com/prod`, these tests target the production environment at [https://islandfeversvg.com](https://islandfeversvg.com).
 
 ## System Requirements
 
@@ -17,20 +22,27 @@ This repository contains automated end-to-end tests for the Island Fevers SVG we
    git clone https://github.com/mnyon-grandkru/your-grenadines-automated-tests.git
    cd your-grenadines-automated-tests
    ```
-2. Install dependencies:
+2. Install dependencies for staging:
    ```sh
+   cd islandfeversvg.com/staging
    npm install
+   npx playwright install
    ```
-3. Install Playwright browsers:
+3. Install dependencies for production:
    ```sh
+   cd ../prod
+   npm install
    npx playwright install
    ```
 
 ## Usage
 
-To run all tests:
+### Staging Tests
+
+To run all staging tests:
 
 ```sh
+cd islandfeversvg.com/staging
 npx playwright test
 ```
 
@@ -40,10 +52,19 @@ To view the test report after running tests:
 npx playwright show-report
 ```
 
-To run a specific test file:
+### Production Tests
+
+To run all production tests:
 
 ```sh
-npx playwright test tests/pages.spec.ts
+cd islandfeversvg.com/prod
+npx playwright test
+```
+
+To view the test report after running tests:
+
+```sh
+npx playwright show-report
 ```
 
 ## License
@@ -56,25 +77,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [gktreviewer](https://github.com/gktreviewer)
 
 Contributions are welcome! Please open an issue or submit a pull request.
-
-## Test Structure
-
-The tests will:
-1. Access the homepage
-2. Enter the password "islandprogression"
-3. Navigate through all main pages
-4. Take screenshots in desktop (1920x1080), tablet (810x1080), and mobile (390x844) viewports
-
-Screenshots will be saved in the `screenshots` directory with the format:
-- `{viewport-width}-{page-name}.png`
-
-## Test Coverage
-
-The test suite covers the following pages:
-- Homepage
-- Bequia Shuttle
-- Mustique Shuttle
-- Our Tours
-- Our Fleet
-- About Us
-- Contact
