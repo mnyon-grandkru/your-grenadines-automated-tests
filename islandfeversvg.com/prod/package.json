@@ -1,0 +1,20 @@
+{
+  "name": "prod",
+  "version": "1.0.0",
+  "description": "This repository contains automated end-to-end tests for the Island Fevers SVG website ([production](https://islandfeversvg.com)) using [Playwright](https://playwright.dev/). The tests cover basic page loads, authentication, and visual verification for the main site pages.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.53.0",
+    "playwright": "^1.53.0",
+    "playwright-core": "^1.53.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
