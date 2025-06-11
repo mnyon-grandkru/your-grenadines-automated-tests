@@ -1,0 +1,28 @@
+# Playwright specific
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/playwright/.config/
+/playwright/.local/
+/playwright/.screenshots/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
